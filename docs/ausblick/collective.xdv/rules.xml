@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/xdv"
+    xmlns:css="http://namespaces.plone.org/xdv+css">
+
+    <!-- Head: title -->
+    <replace theme="/html/head/title" content="/html/head/title" />
+
+    <!-- Base tag -->
+    <replace theme="/html/head/base" content="/html/head/base" />
+
+    <!-- Pull in Plone CSS -->
+    <append theme="/html/head" content="/html/head/script" />
+    <append theme="/html/head" content="/html/head/link | /html/head/style" />
+
+    <!-- Body -->
+    <prepend theme="/html/body" content="/html/body/@class" />
+
+    <!-- Copy the logo -->
+    <replace css:theme="#logo h1" css:content="#portal-logo img" />
+
+    <!-- Copy the main navigation -->
+    <replace css:theme="#links ul" css:content="#portal-globalnav" />
+
+    <replace css:theme="#leftbar h2" css:content="#parent-fieldname-title" />
+
+    <!-- Copy over the contents of the page body -->
+    <replace css:theme="#leftbar" css:content="#content" />
+
+    <!-- Pull Portlets in right bar -->
+    <append content='//*[@id="portal-column-one"]/div' theme='//*[@id="rightbar"]' />
+    <append content='//*[@id="portal-column-two"]/div' theme='//*[@id="rightbar"]' />
+
+    <rules css:if-content="body.section-front-page">
+        <drop css:theme="#rightbar" />
+    </rules>
+</rules>

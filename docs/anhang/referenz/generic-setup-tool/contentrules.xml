@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<contentrules>
+    <rule
+        name="rule-1"
+        title="Mail notification"
+        description=""
+        enabled="True"
+        event="Products.CMFCore.interfaces.IActionSucceededEvent"
+        stop-after="False">
+        <conditions>
+            <condition type="plone.conditions.WorkflowTransition">
+                <property name="wf_transitions">
+                     <element>publish</element>
+                </property>
+            </condition>
+        </conditions>
+        <actions>
+            <action type="plone.actions.Mail">
+                <property name="source">${user_email}</property>
+                <property name="message">${title} ${absolute_url} has changed: ${review_state}
+                </property>
+                <property name="recipients">${reviewer_emails}</property>
+                <property name="subject">${title} changed: ${review_state}/${change_title}</property>
+            </action>
+        </actions>
+    </rule>
+    <assignment
+        location="/news"
+        name="rule-1"
+        enabled="True"
+        bubbles="False"
+    />
+</contentrules>
