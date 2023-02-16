@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = "Plone-Entwicklerhandbuch"
-copyright = "2006–2021, Veit Schiele"
+copyright = "2006–2023, Veit Schiele"
 author = "Veit Schiele"
 
 # The full version, including alpha/beta/rc tags
