@@ -82,22 +82,25 @@ bzw als root::
 .. _`Plone 3. Eine Entscheidungshilfe`: http://www.zope.de/redaktion/dzug/anwendungen/plone3.pdf
 .. _`Paul Everitt: Plone-the-product vs. Plone-the-platform`: http://radio.weblogs.com/0116506/2008/02/05.html#a450
 
-.. toctree::
-    :titlesonly:
-    :hidden:
+Inhalt
+======
 
-    entwicklungsumgebung/index
-    erstellen-eines-site-policy-produkts/index
-    zusatzprodukte/index
-    erscheinungsbild/index
-    archetypes-artikeltypen/index
-    dexterity-artikeltypen/index
-    sicherheit-und-arbeitsablaeufe/index
-    formulare/index
-    internationalisierung/index
-    relationale-datenbanken/index
-    produktivserver/index
-    authentifizierung/index
-    migrationen/index
-    ausblick/index
-    anhang/index
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+
+   entwicklungsumgebung/index
+   erstellen-eines-site-policy-produkts/index
+   zusatzprodukte/index
+   erscheinungsbild/index
+   archetypes-artikeltypen/index
+   dexterity-artikeltypen/index
+   sicherheit-und-arbeitsablaeufe/index
+   formulare/index
+   internationalisierung/index
+   relationale-datenbanken/index
+   produktivserver/index
+   authentifizierung/index
+   migrationen/index
+   ausblick/index
+   anhang/index
